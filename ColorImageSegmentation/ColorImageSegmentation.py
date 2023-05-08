@@ -1,6 +1,5 @@
 import numpy as np
 import cv2
-import matplotlib.pyplot as plt
 import os
 
 
@@ -16,7 +15,7 @@ def segment_rust(img_path: str,
         raise "Image is None!"
 
     # Convert to HSV space to segmentation
-    rust_hsv = cv2.cvtColor(rust, cv2.COLOR_BGR2HSV)
+    rust_hsv = cv2.cvtColor(rust, cv2.COLOR_RGB2HSV)
 
     # Apply a threshold to the green channel to extract the leaves mask
     lower_leaf = np.array([30, 25, 25])
@@ -58,9 +57,11 @@ def segment_rust(img_path: str,
         output_path = os.path.join(save_dir, file_name + ".png")
 
         # Save the combined segmented image
-        cv2.imwrite(output_path, color_segmented)
+        img_to_write = cv2.cvtColor(color_segmented, cv2.COLOR_RGB2BGR)
 
-    return pest_masked_img
+        cv2.imwrite(output_path, img_to_write)
+
+    return color_segmented
 
 
 # Calculate pixel-wise accuracy with having segmented image and ground truth
@@ -75,13 +76,3 @@ def accuracy(seg, gt):
     accuracy = correct_pixels / total_pixels
     # print(f"Pixel-wise accuracy: {accuracy * 100:.3f} %")
     return accuracy
-
-
-# Get the absolute path of the current module
-current_dir = os.path.abspath(os.path.dirname(__file__))
-
-# Change the current directory to the path of the current module
-os.chdir(current_dir)
-pest = segment_rust("../dataset/images/004461.JPG")
-cv2.imshow("pest", pest)
-cv2.waitKey(0)

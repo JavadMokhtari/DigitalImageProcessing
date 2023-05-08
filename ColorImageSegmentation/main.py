@@ -27,10 +27,10 @@ def main():
         # Load and Read Ground Truth image
         label_path = os.path.join(labels_path, image.split(".")[0] + ".png")
         gt_img_bgr = cv2.imread(label_path)
-        # gt_img = cv2.cvtColor(gt_img_bgr, cv2.COLOR_BGR2RGB)
+        gt_img = cv2.cvtColor(gt_img_bgr, cv2.COLOR_BGR2RGB)
 
         # Calculate accuracy and store it
-        acc = accuracy(seg_img, gt_img_bgr)
+        acc = accuracy(seg_img, gt_img)
         acc_list.append(acc)
 
     # Calcualte average of accuracies as total accuracy
