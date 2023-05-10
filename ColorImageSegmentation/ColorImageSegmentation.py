@@ -12,7 +12,7 @@ def segment_rust(img_path: str,
     rust = cv2.imread(img_path)
 
     if rust is None:
-        raise "Image is None!"
+        raise ValueError("Image is None!")
 
     # Convert to HSV space to segmentation
     rust_hsv = cv2.cvtColor(rust, cv2.COLOR_RGB2HSV)
@@ -29,7 +29,7 @@ def segment_rust(img_path: str,
     pest_mask = cv2.inRange(rust_hsv, lower_pest, upper_pest)
 
     # Create a black background image with the same size as the main image
-    background = np.zeros(rust.shape, dtype=np.uint8)
+    background = np.zeros_like(rust, dtype=np.uint8)
 
     # Apply color image segmentation to the main image using the rust mask
     rust_color = (128, 0, 0)  # Red color
@@ -49,8 +49,7 @@ def segment_rust(img_path: str,
 
     if save_output:
         # Create directory if not exists
-        if not os.path.exists(save_dir):
-            os.mkdir(save_dir)
+        os.makedirs(save_dir, exist_ok=True)
 
         # Get output file name to save
         file_name = img_path.split("/")[-1].split(".")[0]
