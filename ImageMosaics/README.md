@@ -1,4 +1,3 @@
-```markdown
 # Image Mosaic Builder
 
 Image Mosaic Builder is a Python script that constructs an image mosaic by rebuilding a given main image using a dataset of smaller images.
