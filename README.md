@@ -24,9 +24,6 @@ To run these image processing apps, you need to have Python installed, along wit
 
 We welcome contributions to enhance and expand the capabilities of these image processing apps. If you have any ideas, bug fixes, or improvements, please feel free to submit a pull request.
 
-## License
-
-This repository is licensed under the [MIT License](./LICENSE). You are free to use, modify, and distribute the code in this repository for your own projects.
 
 We hope you find these image processing apps useful and enjoy exploring the world of image processing!
 
