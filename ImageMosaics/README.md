@@ -2,6 +2,14 @@
 
 Image Mosaic Builder is a Python script that constructs an image mosaic by rebuilding a given main image using a dataset of smaller images.
 
+![Mosaic image with small images of fruits](fruits.jpg)
+
+## Dataset and Image Links [Optional]
+
+- [Main Image](https://wallpapersafari.com/w/Tx82Gp) - The high-resolution fruit image used as the basis for the image mosaic.
+- [Dataset](https://www.kaggle.com/datasets/shreyapmaher/fruits-dataset-images) - The dataset folder containing a collection of different fruits used as tiles in the mosaic.
+
+
 ## Prerequisites
 
 - Python 3.x
