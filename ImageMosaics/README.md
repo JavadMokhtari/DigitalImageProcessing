@@ -14,7 +14,7 @@ Image Mosaic Builder is a Python script that constructs an image mosaic by rebui
    ```bash
    git clone https://github.com/JavadMokhtari/DigitalImageProcessing.git
    ```
-change directory to `ImageMosaics` folder:
+   change directory to `ImageMosaics` folder:
 
    ```bash
    cd ./ImageMosaics
@@ -49,9 +49,6 @@ Here's an example of how to create an image mosaic using the provided main image
 python main.py fruit_background.jpg ../fruits --crop_size 20 --save_res True
 ```
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
