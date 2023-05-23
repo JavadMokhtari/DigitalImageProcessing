@@ -112,6 +112,6 @@ def build_img_mosaics(main_img_path: str,
 
     if save_res:
         # Save rebuilt image
-        canvas.save("fruits.jpg")
+        canvas.save("mosaic.jpg")
 
     return canvas
