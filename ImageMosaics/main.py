@@ -29,7 +29,7 @@ if __name__ == '__main__':
                         help='Path to the dataset folder')
     parser.add_argument('--crop_size', type=int, default=20,
                         help='Crop size [default: (20) 20)]')
-    parser.add_argument('--save_res', action='store_true',
+    parser.add_argument('--save_res', type=bool, default=False,
                         help='Save the resulting image')
 
     # Parse the command-line arguments
