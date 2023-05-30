@@ -45,7 +45,7 @@ Image Mosaic Builder is a Python script that constructs an image mosaic by rebui
    python main.py /PATH/TO/main_image.jpg /PATH/TO/dataset_folder --crop_size 15 --save_res False
    ```
 
-   Replace `/PATH/TO/main_image.jpg` with the path to your main image file, and `/PATH/TO/dataset_folder` with the path to your dataset folder. The `--crop_size` option specifies the desired size of the cropped tiles (default: 20), and the `--save_res` option indicates whether to save the resulting image.
+   Replace `/PATH/TO/main_image.jpg` with the path to your main image file, and `/PATH/TO/dataset_folder` with the path to your dataset folder. This folder should contains all images that you want to use in main image. The `--crop_size` option specifies the desired size of the cropped tiles (default: 20), and the `--save_res` option indicates whether to save the resulting image.
 
 4. The script will generate the image mosaic using the provided main image and dataset. If the `--save_res` option is specified, the resulting image will be saved as `mosaic.jpg` in the current directory. Otherwise, the resulting image will be displayed.
 
